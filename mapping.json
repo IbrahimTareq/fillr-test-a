@@ -2,66 +2,58 @@
 	"email": [
 		{
 			"section": "section-amazon",
-			"address-type: "shipping",
 			"autofill_fieldname": "email"
 		}
 	],
 	"name": [
 		{
 			"section": "section-amazon",
-			"address-type: "shipping",
 			"autofill_fieldname": "email"
 		}
 	],
 	"addr1": [
 		{
 			"section": "section-amazon",
-			"address-type: "shipping",
 			"autofill_fieldname": "address-line1"
 		}
 	],
 	"addr2": [
 		{
 			"section": "section-amazon",
-			"address-type: "shipping",
 			"autofill_fieldname": "address-line2"
 		}
 	],
 	"city": [
 		{
 			"section": "section-amazon",
-			"address-type: "shipping",
 			"autofill_fieldname": "address-level2"
 		}
 	],
 	"state": [
 		{
 			"section": "section-amazon",
-			"address-type: "shipping",
 			"autofill_fieldname": "address-level1"
 		}
 	],
 	"zip": [
 		{
 			"section": "section-amazon",
-			"address-type: "shipping",
 			"autofill_fieldname": "postal-code"
 		}
 	],
 	"country": [
 		{
 			"section": "section-amazon",
-			"address-type: "shipping",
 			"autofill_fieldname": "country-name"
 		}
 	],
 	"phone": [
 		{
 			"section": "section-amazon",
-			"address-type: "shipping",
 			"autofill_fieldname": "mobile tel"
 		}
 	],
+	/*ECLM P1*/
 	"Ecom_ShipTo_Postal_Name_Prefix": [
 		{
 			"section": "section-ecomShipping",
