@@ -53,11 +53,10 @@
 			"autofill_fieldname": "mobile tel"
 		}
 	],
-	/*ECLM P1*/
 	"Ecom_ShipTo_Postal_Name_Prefix": [
 		{
 			"section": "section-ecomShipping",
-			"address_type": "billing",
+			"address_type": "shipping",
 			"autofill_fieldname": "honorific-prefix"
 		}
 	],
@@ -159,7 +158,6 @@
 			"autofill_fieldname": "email"
 		}
 	],
-	/*ECLM P2*/
 	"Ecom_BillTo_Postal_Name_Prefix": [
 		{
 			"section": "section-ecomBilling",
@@ -265,7 +263,6 @@
 			"autofill_fieldname": "email"
 		}
 	],
-	/*ECLM P3*/
 	"Ecom_ReceiptTo_Postal_Name_Prefix": [
 		{
 			"section": "section-ecomReceipt",
@@ -356,7 +353,6 @@
 			"autofill_fieldname": "email"
 		}
 	],
-	/*ECLM P4*/
 	"Ecom_Payment_Card_Name": [
 		{
 			"section": "section-ecomPayment",
