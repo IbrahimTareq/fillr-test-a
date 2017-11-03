@@ -62,4 +62,109 @@
 			"autofill_fieldname": "mobile tel"
 		}
 	],
+	"Ecom_ShipTo_Postal_Name_Prefix": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "honorific-prefix"
+		}
+	],
+	"Ecom_ShipTo_Postal_Name_First": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "given-name"
+		}
+	],
+	"Ecom_ShipTo_Postal_Name_Middle": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "additional-name"
+		}
+	],
+	"Ecom_ShipTo_Postal_Name_Last": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "family-name"
+		}
+	],
+	"Ecom_ShipTo_Postal_Name_Suffix": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "honorific-prefix"
+		}
+	],
+	"Ecom_ShipTo_Postal_Company": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "organization"
+		}
+	],
+	"Ecom_ShipTo_Postal_Street_Line1": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "address-line1"
+		}
+	],
+	"Ecom_ShipTo_Postal_Street_Line2": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "address-line2"
+		}
+	],
+	"Ecom_ShipTo_Postal_Street_Line3": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "address-line3"
+		}
+	],
+	"Ecom_ShipTo_Postal_City": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "address-level2"
+		}
+	],
+	"Ecom_ShipTo_Postal_StateProv": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "address-level1"
+		}
+	],
+	"Ecom_ShipTo_Postal_PostalCode": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "postal-code"
+		}
+	],
+	"Ecom_ShipTo_Postal_CountryCode": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "country"
+		}
+	],
+	"Ecom_ShipTo_Telecom_Phone_Number": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "mobile tel"
+		}
+	],
+	"Ecom_ShipTo_Online_Email": [
+		{
+			"section": "section-ecomShipping",
+			"address_type": "shipping",
+			"autofill_fieldname": "email"
+		}
+	]
 }
