@@ -11,6 +11,8 @@
   "dependencies" : {
     "mocha" : "*",
     "chai" : "*",
-    "jsdom" : "*"
+    "jsdom" : "*",
+    "curl": "^0.1.4",
+    "jquery": "^3.2.1"
   }
 }
