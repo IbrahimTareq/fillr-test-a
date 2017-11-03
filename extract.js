@@ -16,8 +16,9 @@ module.exports.extract = function(window) {
 	    const dom = new JSDOM(html);
 	    const $ = (require('jquery'))(dom.window);
 
-	    //var obj = {};
-    	var keys = [];
+	    var obj = {};
+	    var keys = [];
+	    var values = [];
 
 	    var table_rows = $("tr");
 	    var inputs = $("input");
@@ -33,10 +34,12 @@ module.exports.extract = function(window) {
 	            keys.push(label.toString().trim()); //Whitespace removed
 	        }
 
-	        keys.shift(); //Get rid of the first <tr> with link tags
-		    for(var i = 0; i < keys.length; i++) {
-		        console.log(keys[i]);
-		    }
+	        //Country name is inside a select tag so it is being added manually
+	        if (label.toString().trim() === 'ZIP/Postal Code'){
+	            values.push("country");
+	        }
+	        values.push(input_name.toString().trim()); //Whitespace removed
 	    }
+
 	}
 }
