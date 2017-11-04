@@ -1,51 +1,55 @@
-const curl = require("curl");
-const jsdom = require("jsdom");
+var curl = require("curl");
+var jsdom = require("jsdom");
 
-module.exports.extract = function(window) {
-  
-	curl.get(url, null, (err,res,body)=>{
-	    if(res.statusCode == 200){
-	        parseData(body);
-	    } else{
-	        console.log("Error while fetching url");
-	    };
-	});
+module.exports = {
 
-	function parseData(html){
-	    const {JSDOM} = jsdom;
-	    const dom = new JSDOM(html);
-	    const $ = (require('jquery'))(dom.window);
+    extract: function() {
+        const url = "http://autofill.mozdev.org/autofilltest.html";
 
-	    var obj = {};
-	    var keys = [];
-	    var values = [];
+        curl.get(url, null, (err,res,body)=>{
+            if(res.statusCode == 200){
+                parseData(body);
+            } else{
+                console.log("error while fetching url");
+            };
+        });
+    },
 
-	    var table_rows = $("tr");
-	    var inputs = $("input");
+    parseData: function(html){
+        const {JSDOM} = jsdom;
+        const dom = new JSDOM(html);
+        const $ = (require('jquery'))(dom.window);
 
-	    for(var i = 0; i < table_rows.length; i++){
-	        var label = $(table_rows[i]).children('td').html();
-	        var input_name = String($(inputs[i]).attr('name')); //Convert to string
-	        var patt = new RegExp("^\\s*(<.*)>$"); //Checks initial trailing space and <> tags
-	        var res = patt.test(label);
+        var obj = {};
+        var keys = [];
+        var values = [];
 
-	        //If the item is a valid label and is not an HTML tag
-	        if(res == false){
-	            keys.push(label.toString().trim()); //Whitespace removed
-	        }
+        var table_rows = $("tr");
+        var inputs = $("input");
 
-	        //Country name is inside a select tag so it is being added manually
-	        if (label.toString().trim() === 'ZIP/Postal Code'){
-	            values.push("country");
-	        }
-	        values.push(input_name.toString().trim()); //Whitespace removed
-	    }
+        for(var i = 0; i < table_rows.length; i++){
+            var label = $(table_rows[i]).children('td').html();
+            var input_name = String($(inputs[i]).attr('name')); //Convert to string
+            var patt = new RegExp("^\\s*(<.*)>$"); //Checks initial trailing space and <> tags
+            var res = patt.test(label);
 
-	    keys.shift(); //Get rid of the first <tr> with link tags
-	    for(var i = 0; i < keys.length; i++) {
-	        obj[keys[i]] = keys[i] + " " + values[i];
-	    }
+            //If the item is a valid label and is not an HTML tag
+            if(res == false){
+                keys.push(label.toString().trim()); //Whitespace removed
+            }
 
-	    return obj;
-	}
+            //Country name is inside a select tag so it is being added manually
+            if (label.toString().trim() === 'ZIP/Postal Code'){
+                values.push("country");
+            }
+            values.push(input_name.toString().trim()); //Whitespace removed
+        }
+
+        keys.shift(); //Get rid of the first <tr> with link tags
+        for(var i = 0; i < keys.length; i++) {
+            obj[keys[i]] = keys[i] + " " + values[i];
+        }
+
+        return obj;
+    }
 }
